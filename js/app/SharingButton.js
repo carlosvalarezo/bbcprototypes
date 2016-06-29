@@ -6,7 +6,7 @@ var React = require('react');
 var SharingButton = React.createClass({
     handleClick:function(sharedUrl)
     {
-        console.log("Hola ---> " + sharedUrl);
+        /*console.log("Hola ---> " + sharedUrl);*/
         /*window.plugins.socialsharing.share('http://www.bbc.co.uk' + sharedUrl);*/
     },
     render:function()

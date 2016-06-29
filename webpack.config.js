@@ -2,7 +2,7 @@
  * Created by carlos-valarezo on 27/04/2016.
  */
 module.exports={
-    entry:{app:['./js/app/SportsContainer.js']},
+    entry:{app:['./js/app/app.js']},
     output:
     {
         path: __dirname,

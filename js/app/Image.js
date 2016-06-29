@@ -19,7 +19,7 @@ var Image = React.createClass({
                 (
                     this.props.image.index[key].href.indexOf('k')+1,this.props.image.index[key].href.length-1
                 );
-            console.log(url);
+            /*console.log(url);*/
             return <div className={this.props.id + "-img-container"}><img src={url}
                         alt={this.props.image.index[key].altText}/></div>;
         });

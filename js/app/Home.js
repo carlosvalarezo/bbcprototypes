@@ -4,6 +4,9 @@
 
 var React = require ( 'react' );
 
+import FetchingData from './FetchingData';
+import StoriesContainer from './StoriesContainer';
+
 var Home = React.createClass({
     render:function()
     {
@@ -12,3 +15,4 @@ var Home = React.createClass({
 
 });
 export default Home;
+

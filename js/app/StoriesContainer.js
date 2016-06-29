@@ -7,9 +7,9 @@ import StoryContainer from './StoryContainer';
 var StoriesContainer = React.createClass({
     render:function()
     {
-
+        console.log("En storiescontainer");
         return(
-            <div className="">
+            <div>
 
                 <StoryContainer id="type-a-top-story-1"
                     stories={

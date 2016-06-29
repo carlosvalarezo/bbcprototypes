@@ -12,6 +12,7 @@ var StoryContainer = React.createClass({
 
     render:function()
     {
+        console.log("En STORY----CONTAINER");
         var stories = this.props.stories.map((story) =>
         {
             return (this.props.id === "type-a-top-story-1")

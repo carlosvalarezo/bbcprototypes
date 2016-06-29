@@ -14,30 +14,32 @@ var Story = React.createClass ( {
 
         var story = this.props.story.map((item) => {
             /*console.log("id story = " + this.props.id)*/
-            console.log("assetUri = " + item.assetUri);
+            /*console.log("assetUri = " + item.assetUri);*/
             //TODO:the string www.bbc.co.uk shoul be a parameter from container as it might change in the future
             //TODO: It can also come directly from the json file
             let completeURL = "http://www.bbc.co.uk" + item.assetUri;
             return(
-                <article>
-                    <Link to="/fullStory">
-                        <div>
-                            <div className={this.props.id + "-title"}>
-                                {item.headline} {item.title}
-                            </div>
+                <div>
+                    <article>
+                        <Link to="/fullStory">
                             <div>
-                                {item.summary}
-                            </div>
-                            <MediaContainer id={this.props.id} media={item.media} />
+                                <div className={this.props.id + "-title"}>
+                                    {item.headline} {item.title}
+                                </div>
+                                <div>
+                                    {item.summary}
+                                </div>
+                                <MediaContainer id={this.props.id} media={item.media} />
 
-                        </div>
-                    </Link>
-                    <SharingButton shareLink={completeURL} />
-                </article>
+                            </div>
+                        </Link>
+                        <SharingButton shareLink={completeURL} />
+                    </article>
+                </div>
 
             );
         })
-        return(<div> {story} </div>);
+        return( <div> {story} </div>);
     }
 } );
 export default Story;

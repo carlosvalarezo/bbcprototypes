@@ -3,17 +3,13 @@
  */
 
 var React = require ( 'react' );
-
 var FullStory = React.createClass({
     render:function()
     {
         return <div>FullStory</div>
+
+
     }
 
 });
-
-ReactDOM.render((
-
-
-    FullStory), document.getElementById("root"));
 export default FullStory;
