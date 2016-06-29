@@ -14,6 +14,7 @@ import Home from './Home';
 import Football from './Football';
 import Formula1 from './Formula1';
 import Cricket from './Cricket';
+import Story from './Story';
 import FullStory from './FullStory';
 import SportsContainer from './SportsContainer';
 
@@ -29,11 +30,13 @@ var App = React.createClass({
 ReactDOM.render((
     <Router history={history}>
         <Route path="/" component={SportsContainer}>
-                <IndexRoute component={Football} />
-                <Route path="/football" component={Football}/>
-                <Route path="/formula1" component={Formula1}/>
-                <Route path="/cricket" component={Cricket}/>
-                <Route path="/fullStory" component={FullStory}/>
+                <IndexRoute component={Home} />
+                <Route path="football" component={Football}/>
+                <Route path="formula1" component={Formula1}/>
+                <Route path="cricket" component={Cricket}/>
+                <Route path="fullStory/:assetUri" component={FullStory}>
+
+                </Route>
         </Route>
     </Router>), document.getElementById("root"));
 

@@ -15,13 +15,13 @@ var Story = React.createClass ( {
         var story = this.props.story.map((item) => {
             /*console.log("id story = " + this.props.id)*/
             /*console.log("assetUri = " + item.assetUri);*/
-            //TODO:the string www.bbc.co.uk shoul be a parameter from container as it might change in the future
+            //TODO:the string www.bbc.co.uk should be a parameter from container as it might change in the future
             //TODO: It can also come directly from the json file
             let completeURL = "http://www.bbc.co.uk" + item.assetUri;
             return(
                 <div>
                     <article>
-                        <Link to="/fullStory">
+                        <Link to={"fullStory/"+"88"}>
                             <div>
                                 <div className={this.props.id + "-title"}>
                                     {item.headline} {item.title}
@@ -39,7 +39,7 @@ var Story = React.createClass ( {
 
             );
         })
-        return( <div> {story} </div>);
+        return(<div> <div> {story} <div>{this.props.children}</div> </div> </div>);
     }
 } );
 export default Story;

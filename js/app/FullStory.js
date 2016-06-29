@@ -4,11 +4,25 @@
 
 var React = require ( 'react' );
 var FullStory = React.createClass({
+    getInitialState:function()
+    {
+        return {parame:null}
+    },
+    componentDidMount:function()
+    {
+        let uriTemp = this.props.params.assetUri;
+        this.setState({parame:uriTemp});
+
+    },
+    componentWillReceiveProps:function(nextProps)
+    {
+        let anotherUriTemp = nextProps.params.assetUri;
+        this.setState({parame:anotherUriTemp});
+    },
     render:function()
     {
-        return <div>FullStory</div>
-
-
+        console.log("Hi fullStory");
+        return <div>FullStory, {this.state.parame}</div>
     }
 
 });
